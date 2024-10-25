@@ -8,7 +8,7 @@ class testscreen extends StatefulWidget {
   static const String routeName = 'test';
   CategoryModel categoryModel;
 
-  testscreen(this.categoryModel);
+  testscreen(this.categoryModel, {super.key});
 
   @override
   State<testscreen> createState() => _testscreenState();
@@ -32,8 +32,8 @@ class _testscreenState extends State<testscreen> {
         ),
         centerTitle: true,
 
-        backgroundColor: Color(0xFF39A552),
-        shape: OutlineInputBorder(
+        backgroundColor: const Color(0xFF39A552),
+        shape: const OutlineInputBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(25),
             bottomRight: Radius.circular(25),
@@ -83,7 +83,7 @@ class _testscreenState extends State<testscreen> {
         },
         decoration: InputDecoration(
           hintText: "Search Article",
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             color: Colors.green,
           ),
           border: OutlineInputBorder(
@@ -91,7 +91,7 @@ class _testscreenState extends State<testscreen> {
           ),
           prefixIcon: IconButton(
             color: Colors.green,
-            icon: Icon(
+            icon: const Icon(
               Icons.clear,
               size: 22,
             ),
@@ -101,15 +101,15 @@ class _testscreenState extends State<testscreen> {
             },
           ),
           fillColor: Colors.white,
-          disabledBorder: OutlineInputBorder(
+          disabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.transparent),
           ),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.transparent),
           ),
           suffixIcon: IconButton(
             color: Colors.green,
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               size: 22,
             ),

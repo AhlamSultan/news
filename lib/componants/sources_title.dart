@@ -9,7 +9,7 @@ class SourcesTitle extends StatefulWidget {
 
   // Function onClick;
 
-  SourcesTitle(this.sources);
+  SourcesTitle(this.sources, {super.key});
 
   @override
   State<SourcesTitle> createState() => _SourcesTitleState();
@@ -51,7 +51,7 @@ class _SourcesTitleState extends State<SourcesTitle> {
               return SourceItem(
                   e.name ?? "", widget.sources.indexOf(e) == index);
             }).toList(),
-            padding: EdgeInsets.only(top: 8),
+            padding: const EdgeInsets.only(top: 8),
           ),
         ),
         FutureBuilder(
@@ -59,10 +59,10 @@ class _SourcesTitleState extends State<SourcesTitle> {
               ApiManager.getNewsData(sourceId: widget.sources[index].id ?? ""),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }
             if (snapshot.hasError) {
-              return Center(child: Text("something went wrong"));
+              return const Center(child: Text("something went wrong"));
             }
             var articls = snapshot.data?.articles ?? [];
             return Expanded(

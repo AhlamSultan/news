@@ -41,11 +41,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 showSearch(context: context, delegate: NewsSearch());
               });
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
-        backgroundColor: Color(0xFF39A552),
-        shape: OutlineInputBorder(
+        backgroundColor: const Color(0xFF39A552),
+        shape: const OutlineInputBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(25),
             bottomRight: Radius.circular(25),

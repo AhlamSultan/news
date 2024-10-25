@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class DrawerItem extends StatelessWidget {
   Function onClicked;
 
-  DrawerItem(this.onClicked);
+  DrawerItem(this.onClicked, {super.key});
 
   static int category = 1;
   static int setting = 1;
@@ -20,22 +20,22 @@ class DrawerItem extends StatelessWidget {
             color: Colors.green,
             height: 150,
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text(
+          const Text(
             "Navigation",
             textAlign: TextAlign.start,
             style: TextStyle(color: Colors.grey),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           InkWell(
             onTap: () {
               onClicked(category);
             },
-            child: Row(
+            child: const Row(
               children: [
                 SizedBox(
                   width: 10,
@@ -55,14 +55,14 @@ class DrawerItem extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           InkWell(
             onTap: () {
               onClicked(setting) {}
             },
-            child: Row(
+            child: const Row(
               children: [
                 SizedBox(
                   width: 10,
@@ -82,17 +82,17 @@ class DrawerItem extends StatelessWidget {
               ],
             ),
           ),
-          Divider(
+          const Divider(
             thickness: 1.5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           InkWell(
             onTap: () {
               onClicked(setting) {}
             },
-            child: Row(
+            child: const Row(
               children: [
                 SizedBox(
                   width: 10,

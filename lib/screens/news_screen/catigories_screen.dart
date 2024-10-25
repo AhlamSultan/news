@@ -6,7 +6,7 @@ class CategoriesScreen extends StatelessWidget {
   var categories = CategoryModel.getCategories();
   Function onCategoryClicked;
 
-  CategoriesScreen(this.onCategoryClicked);
+  CategoriesScreen(this.onCategoryClicked, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CategoriesScreen extends StatelessWidget {
       padding: const EdgeInsets.all(14.0),
       child: GridView.builder(
         itemCount: categories.length,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 12,
           crossAxisSpacing: 12,

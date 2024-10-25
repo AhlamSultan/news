@@ -9,7 +9,7 @@ class WebViewAllNews extends StatefulWidget {
 
   Articles articles;
 
-  WebViewAllNews({required this.articles});
+  WebViewAllNews({super.key, required this.articles});
 }
 
 class _WebViewAllNewsState extends State<WebViewAllNews> {
@@ -37,7 +37,7 @@ class _WebViewAllNewsState extends State<WebViewAllNews> {
                     Navigator.pop(context);
                   },
                   child: Icon(Icons.arrow_back)),
-              Container(
+              SizedBox(
                 height: 50,
                 width: 50,
                 child: CircleAvatar(

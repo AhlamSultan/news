@@ -7,17 +7,17 @@ class CategoryItem extends StatelessWidget {
   CategoryModel categoryModel;
   int index;
 
-  CategoryItem(this.categoryModel, this.index);
+  CategoryItem(this.categoryModel, this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          topRight: Radius.circular(25),
-          topLeft: Radius.circular(25),
-          bottomLeft: index.isEven ? Radius.circular(25) : Radius.zero,
-          bottomRight: index.isOdd ? Radius.circular(25) : Radius.zero,
+          topRight: const Radius.circular(25),
+          topLeft: const Radius.circular(25),
+          bottomLeft: index.isEven ? const Radius.circular(25) : Radius.zero,
+          bottomRight: index.isOdd ? const Radius.circular(25) : Radius.zero,
         ),
         color: categoryModel.color,
       ),

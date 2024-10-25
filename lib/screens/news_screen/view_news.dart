@@ -6,7 +6,7 @@ import '../../models/NewsDataModel.dart';
 class ViewNews extends StatelessWidget {
   Articles articles;
 
-  ViewNews({required this.articles});
+  ViewNews({super.key, required this.articles});
 
 // String urlToImage;
 // String title;
@@ -34,26 +34,26 @@ class ViewNews extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 articles.author ?? "",
-                style: TextStyle(color: Color(0xFF79828B)),
+                style: const TextStyle(color: Color(0xFF79828B)),
               ),
             ),
             Text(articles.title ?? ""),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
               children: [
-                Spacer(),
+                const Spacer(),
                 Text(articles.publishedAt?.substring(0, 10) ?? ""),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               child: Text(articles.content ?? ""),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             InkWell(
@@ -66,7 +66,7 @@ class ViewNews extends StatelessWidget {
                   },
                 ));
               },
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text('View Full Article'),

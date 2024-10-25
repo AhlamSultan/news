@@ -18,7 +18,7 @@ class NewsSearch extends SearchDelegate {
         onPressed: () {
           showResults(context);
         },
-        icon: Icon(Icons.search),
+        icon: const Icon(Icons.search),
       ),
     ];
   }
@@ -29,7 +29,7 @@ class NewsSearch extends SearchDelegate {
       onPressed: () {
         Navigator.pop(context);
       },
-      icon: Icon(
+      icon: const Icon(
         Icons.clear,
         size: 32,
       ),
@@ -42,10 +42,10 @@ class NewsSearch extends SearchDelegate {
       future: ApiManager.getNewsData(searchKeyword: query),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         }
         if (snapshot.hasError) {
-          return Center(child: Text("something went wrong"));
+          return const Center(child: Text("something went wrong"));
         }
         var articls = snapshot.data?.articles ?? [];
         return Expanded(
@@ -62,7 +62,7 @@ class NewsSearch extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('xd'),
     );
   }
